@@ -164,6 +164,7 @@ const editReport = (ele) => {
   submitBtn.innerText = "Update";
   heading.innerText = "Edit Money";
   idEle.value = result.getAttribute("id");
+  error.innerHTML = "";
   for (let i = 0; i < tr.length; i++) {
     tr[i].style.background = "";
   }
@@ -175,6 +176,7 @@ const deleteReport = (ele) => {
     resetBtn.click();
     submitBtn.innerText = "Submit";
   }
+  resetBtn.click();
   ele.parentElement.parentElement.remove();
   data.splice(ele.parentElement.parentElement.id, 1);
   localStorage.setItem("data", JSON.stringify(data));
@@ -187,6 +189,7 @@ resetBtn.addEventListener("click", () => {
   description.value = "";
   type.value = "income";
   amount.value = "";
+  error.innerHTML = "";
   idEle.value = "";
   error.innerHTML = "";
   for (let i = 0; i < tr.length; i++) {
