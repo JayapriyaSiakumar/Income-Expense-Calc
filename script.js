@@ -187,6 +187,8 @@ resetBtn.addEventListener("click", () => {
   description.value = "";
   type.value = "income";
   amount.value = "";
+  idEle.value = "";
+  error.innerHTML = "";
   for (let i = 0; i < tr.length; i++) {
     tr[i].style.background = "";
   }
